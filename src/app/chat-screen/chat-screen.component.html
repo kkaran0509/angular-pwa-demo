@@ -1,0 +1,32 @@
+<mat-toolbar>
+  <button mat-icon-button (click)="navigateToHome()">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <h3 class="app-name">My App</h3>
+  <button mat-icon-button class="option-button">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="chat-wrapper">
+    <div class="chat-header">
+      <h1>Chat</h1>
+      <h4>Ready to help any time</h4>
+    </div>
+    <div class="chat-messages">
+      <div class="message received">
+        <p>Hello! How Can I assist you Today!</p>
+      </div>
+      <div *ngFor="let item of responses">
+        <div class="message sent">
+          <p>{{ item }}</p>
+        </div>
+      </div>
+     
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Type your message">
+      <button>Send</button>
+    </div>
+  </div>
+
+  
